@@ -8,7 +8,7 @@ int SecondLargest(vector<int>& arr){
                 slargest=largest;
                 largest=arr[i];
             }
-            else if(slargest<arr[i] && arr[i]!=largest){
+            else if(slargest<arr[i] && arr[i]<largest){
                 slargest=arr[i];
             }
         }
