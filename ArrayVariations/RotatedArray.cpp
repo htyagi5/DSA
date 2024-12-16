@@ -9,7 +9,7 @@ void  rotate(vector<int> & a,int i,int j){
        reverse(a.begin()+d,a.end()); 
        reverse(a.begin(),a.end());
 }
-int main(){
+int main(){                               
    int i,n;
    cin>>n;
    vector<int> a(n);
