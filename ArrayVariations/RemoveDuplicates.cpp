@@ -3,14 +3,16 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-void remove(vector<int> &a,int i,int j){
-    int index=0;
-    for(int k=i;k<=j;k++){
-   if(a[k]!=a[index]){
-    a[index+1]=a[k];
-    index++;
-   }
-    }
+int remove(vector<int> &a){
+    sort(a.begin(),a.end());
+    int i=0;
+     for(int k=1;k<a.size();k++){
+        if(a[k]!=a[i]){
+            a[i+1]=a[k];
+             i++;
+        }
+     }
+   return i+1;   
 }
 int main(){
     int i,n;
@@ -20,10 +22,12 @@ int main(){
         cin>>a[i];
     }
     
-    remove(a,0,n-1);
-     for(auto it: a){
-         cout<<it<<" ";
-     }
+    int result=remove(a);
+      for(int  i = 0; i < result; i++)
+      {
+       cout<<a[i]<<" ";
+    }
+      
     return 0;
 }
 // #include<bits/stdc++.h>

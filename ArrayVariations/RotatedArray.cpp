@@ -1,13 +1,13 @@
-//optimal approach
+//optimal approach  for right rotation
 #include<bits/stdc++.h>
 using namespace std;
 void  rotate(vector<int> & a,int i,int j){
        int d;
        cin>>d;
        d=d%j;
+       reverse(a.begin(),a.end());
        reverse(a.begin(),a.begin()+d);
        reverse(a.begin()+d,a.end()); 
-       reverse(a.begin(),a.end());
 }
 int main(){                               
    int i,n;
@@ -22,6 +22,30 @@ int main(){
    }
     return 0;
 } 
+// optimal approach  for left rotation
+// #include<bits/stdc++.h>
+// using namespace std;
+// void  rotate(vector<int> & a,int i,int j){
+//        int d;
+//        cin>>d;
+//        d=d%j;
+//        reverse(a.begin(),a.begin()+d);
+//        reverse(a.begin()+d,a.end()); 
+//        reverse(a.begin(),a.end());
+// }
+// int main(){                               
+//    int i,n;
+//    cin>>n;
+//    vector<int> a(n);
+//    for(i=0;i<n;i++){
+//     cin>>a[i];
+//    }
+//    rotate(a,0,n);
+//    for(i=0;i<n;i++){
+//     cout<<a[i]<<" ";
+//    }
+//     return 0;
+// } 
 
 //Time complexity is O(d)+O(n-d)+O(n)=O(2n)  it is increased but space decrease
 ////space complexity=O(n) only
